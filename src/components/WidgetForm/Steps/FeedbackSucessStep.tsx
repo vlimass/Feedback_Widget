@@ -26,10 +26,7 @@ export function FeedbackSucessStep({ onFeedbackRestartRequested }: FeedbackSuces
             >
                 Quero enviar outro
             </button>
-
             </div>
-
-
         </>
     );
 }
