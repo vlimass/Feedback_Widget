@@ -1,0 +1,24 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// UUID : Universal Unique ID
+// ex uuid: 020cf353-9d23-434f-a25f-283a94f4562d
+
+model Feedback {
+  id String @id @default(uuid()) // Primer KEY
+
+  type       String
+  comment    String
+  screenshot String?
+
+  @@map("feedbacks")
+}
